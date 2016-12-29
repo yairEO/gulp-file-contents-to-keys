@@ -70,7 +70,7 @@
     "path"        : "~0.12.7",
     "vinyl"       : "~0.6.1"
   },
-  "description": "Input some files, outputs a javascript Object with **keys** as file names and **values** as their content (escaped string) Very helpful when working with HTML template files and you want to import them all in an easy way. ",
+  "description": "convert files into key/value objects where key is filename, value is the content",
   "devDependencies": {
     "gulp"        : "~3.8.7",
     "gulp-concat" : "~2.6.1",
