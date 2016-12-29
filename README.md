@@ -72,8 +72,8 @@ gulp.task('default', function() {
 Name               | Type       | Default          | Info
 ------------------ | ---------- | -----------------| --------------------------------------------------------------------------
 name               | String     | `var temlpates`  | the name which points to the created Object. For example: `export default templates` if you want to import it using ES6 modules
+folderDelimiter    | String     | \|               | delimiter in Object key, for deep files within folders
 fileName           | String     |                  | example: 'output.js' will output that file to the stream. it is an optional and the output of the plugin can also be used (within the gulp task) with `gulp-concat` to output to anywhere
-folderDelimiter    | String     | `|`              | delimiter in Object key, for deep files within folders
 minify             | Boolean    | true             | minify the files' content (removes new lines & whitespaces between HTML tags)
 removeFileTypes    | Boolean    | true             | don't include in the Objects keys the file types (disregard `.html` for example)
 
