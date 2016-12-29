@@ -1,15 +1,14 @@
 'use strict';
 
-var assert = require('assert');
-var path = require('path');
-var gutil = require('gulp-util');
+var assert      = require('assert'),
+    path        = require('path'),
+    gutil       = require('gulp-util'),
+    filesToKeys = require('./index.js');
 
-var fc2modules = require('./index.js');
 
-
-describe('gulp-file-contents-to-modules', function() {
-    it('should return -1 when the value is not present', function () {
+describe('gulp-file-contents-to-keys', function() {
+    it('should simply work', () => {
 		// should do a REAL test..
-		assert.equal(-1, [1,2,3].indexOf(0));
+		assert.equal(1, 1);
     });
 });

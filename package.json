@@ -99,7 +99,7 @@
     "url"  : "git+https://github.com/yaireo/gulp-file-contents-to-keys.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test.js"
   },
   "version": "1.0.0"
 }
