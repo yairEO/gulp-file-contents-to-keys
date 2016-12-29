@@ -1,3 +1,6 @@
+// by Yair-Even-Or
+// v1.0.1
+
 var through2 = require('through2'),
     gutil    = require('gulp-util'),
     path     = require('path'),
