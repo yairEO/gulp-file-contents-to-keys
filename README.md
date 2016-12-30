@@ -2,7 +2,7 @@
 [gulp](http://gulpjs.com/)-file-contents-to-keys
 ================================================
 
-### [NPM package pagh](https://www.npmjs.com/package/gulp-file-contents-to-keys)
+### [NPM package page](https://www.npmjs.com/package/gulp-file-contents-to-keys)
 
 Input some files, outputs a javascript Object with **keys** as file names and **values** as their content (escaped string)
 Very helpful when working with HTML template files and you want to import them all in an easy way.
