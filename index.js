@@ -8,7 +8,7 @@ var through2 = require('through2'),
 
 
 var PLUGIN_NAME = 'gulp-file-contents-to-keys',
-    files = { },
+    files = {},
     outputFile = null,
     options = {
         name            : 'var templates',
@@ -18,8 +18,7 @@ var PLUGIN_NAME = 'gulp-file-contents-to-keys',
 
 
 function parseFileName( file ){
-    var name = file.path.replace(file.base, '');//.replace(/\\/g,'__').replace(/-/g,'_');   // 'foo/bar/baz-meh.txt' => 'foo__bar__baz_meh'
-    name = name.replace(/\\/g, options.folderDelimiter); // folders delimeter "|"
+    var name = file.path.replace(file.base, '');
 
     if( options.removeFileTypes )
         name = name.split('.').slice(0, -1).join('.'); // trim file type (no ".html" for example)
@@ -42,8 +41,21 @@ function parseFileContent( file ){
  */
 function iterateFile( file, enc, callback ){
     outputFile = outputFile || file;
-    var filePath = parseFileName(file); // path.relative(file.base, file.path);
-    files[filePath] = parseFileContent(file);
+    var fileName = parseFileName(file),
+        path = files; // path.relative(file.base, file.path);
+
+    filePathArr = fileName.split('\\');
+
+    filePathArr.forEach((v, i) => {
+        // last part is the file name itself and not a path
+        if( i == filePathArr.length - 1 )
+            path[v] = parseFileContent(file);
+        else if( v in path )
+            path = path[v];
+        else
+            path = path[v] = {};
+    })
+
     callback();
 }
 
@@ -58,7 +70,7 @@ function iterationResult( callback ){
         outputFile.path = path.resolve(outputFile.base, options.fileName);
 
     outputFile.contents = new Buffer(
-        options.name + ' = ' + JSON.stringify(files, null, 2) + ';'
+        options.name + ' = ' + JSON.stringify(files, null, 4) + ';'
     );
 
     this.push(outputFile);

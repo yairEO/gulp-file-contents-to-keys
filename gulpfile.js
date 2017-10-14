@@ -9,8 +9,7 @@ gulp.task('default', function() {
                 name            : 'export default templates',
                 fileName        : 'output.js',
                 minify          : true,
-                removeFileTypes : true,
-                folderDelimiter : '|',
+                removeFileTypes : true
             }
         ))
        // .pipe(concat('output.js'))

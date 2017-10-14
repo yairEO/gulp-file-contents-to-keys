@@ -1,6 +1,6 @@
 {
-  "version"     : "1.0.3",
-  "name"        : "gulp-file-contents-to-keys",
+  "version"     : "2.0.0",
+  "name"        : "gulp-ile-contents-to-keys",
   "description" : "convert files into key/value objects where key is filename, value is the content",
   "homepage"    : "https://github.com/yaireo/gulp-file-contents-to-keys#readme",
   "_npmUser"    : {
@@ -15,14 +15,13 @@
     "url": "https://github.com/yaireo/gulp-file-contents-to-keys/issues"
   },
   "dependencies": {
-    "gulp-util": "~3.0.8",
-    "nconf": "~0.8.4",
-    "through2": "~2.0.3",
-    "path"        : "~0.12.7",
-    "vinyl": "~2.0.2"
+    "gulp-util" : "~3.0.8",
+    "through2"  : "~2.0.3",
+    "path"      : "~0.12.7",
+    "vinyl"     : "~2.0.2"
   },
   "devDependencies": {
-    "gulp": "~3.9.1",
+    "gulp"        : "~3.9.1",
     "gulp-concat" : "~2.6.1",
     "mocha"       : "*"
   },
